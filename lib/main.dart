@@ -84,7 +84,7 @@ class _MyAppState extends State<MyApp> {
                 child: const Center(
                   child: Text(
                     'my timer',
-                    style: TextStyle(color: Colors.white, fontSize: 50),
+                    style: TextStyle(color: Colors.black, fontSize: 50),
                   ),
                 ),
               )),
@@ -96,12 +96,10 @@ class _MyAppState extends State<MyApp> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    timeButton(sec: 60, color: Colors.black12),
-                    timeButton(sec: 30, color: Color.fromARGB(31, 167, 24, 24)),
-                    timeButton(
-                        sec: -60, color: Color.fromARGB(31, 247, 17, 17)),
-                    timeButton(
-                        sec: -30, color: Color.fromARGB(31, 147, 173, 32)),
+                    timeButton(sec: 60, color: Colors.white),
+                    timeButton(sec: 30, color: Colors.white),
+                    timeButton(sec: -60, color: Colors.white),
+                    timeButton(sec: -30, color: Colors.white),
                   ],
                 ),
               )),
@@ -110,7 +108,7 @@ class _MyAppState extends State<MyApp> {
               child: Container(
                 width: double.infinity,
                 height: double.infinity,
-                color: Colors.orange,
+                color: Colors.black,
                 child: Center(
                   child: Text(
                     timeview,
@@ -123,7 +121,7 @@ class _MyAppState extends State<MyApp> {
               child: Container(
                   width: double.infinity,
                   height: double.infinity,
-                  color: Colors.amber,
+                  color: Colors.black,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -131,19 +129,23 @@ class _MyAppState extends State<MyApp> {
                         IconButton(
                             iconSize: 50,
                             onPressed: timeStart,
-                            icon: Icon(Icons.pause_circle_rounded))
+                            icon: Icon(Icons.pause_circle_rounded,
+                                color: Colors.white))
                       else
                         IconButton(
                             iconSize: 50,
                             onPressed: timeStart,
-                            icon: const Icon(Icons.play_circle_rounded)),
+                            icon: const Icon(Icons.play_circle_rounded,
+                                color: Colors.white)),
                       SizedBox(
                         width: 20,
                       ),
                       IconButton(
-                          iconSize: 50,
-                          onPressed: timeReset,
-                          icon: Icon(Icons.stop_circle_rounded)),
+                        iconSize: 50,
+                        onPressed: timeReset,
+                        icon: Icon(Icons.stop_circle_rounded,
+                            color: Colors.white),
+                      ),
                     ],
                   ))),
         ],
